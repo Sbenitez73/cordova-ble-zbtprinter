@@ -1,0 +1,27 @@
+{
+  "name": "@sbenitez73/cordova-ble-zbtprinter",
+  "version": "1.0.1",
+  "description": "This plugin globally defines the different actions that the printer can have, such as print, obtain ZPL code, print, etc.",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sbenitez73/cordova-ble-zbtprinter.git"
+  },
+  "keywords": [
+    "cordova",
+    "ionic",
+    "zebra",
+    "printer",
+    "thermal",
+    "capacitor"
+  ],
+  "author": "Santiago Benitez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sbenitez73/cordova-ble-zbtprinter/issues"
+  },
+  "homepage": "https://github.com/Sbenitez73/cordova-ble-zbtprinter#readme"
+}
