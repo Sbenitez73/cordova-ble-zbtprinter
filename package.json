@@ -1,6 +1,6 @@
 {
   "name": "@sbenitez73/cordova-ble-zbtprinter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This plugin globally defines the different actions that the printer can have, such as print, obtain ZPL code, print, etc.",
   "main": "./src/ionic/index.js",
   "types": "./src/ionic/index.d.ts",
