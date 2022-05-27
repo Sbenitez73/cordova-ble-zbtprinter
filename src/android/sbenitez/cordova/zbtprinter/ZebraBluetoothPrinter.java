@@ -1,4 +1,4 @@
-package it.zenitlab.cordova.plugins.zbtprinter;
+package sbenitez.cordova.zbtprinter;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -12,7 +12,7 @@ import android.os.Looper;
 import android.util.Base64;
 import java.nio.charset.Charset;
 import android.util.Log;
-import it.zenitlab.cordova.plugins.zbtprinter.ZPLConverter;
+import sbenitez.cordova.zbtprinter.ZPLConverter;
 import org.json.JSONObject;
 import org.apache.cordova.PluginResult;
 import com.zebra.sdk.comm.BluetoothConnectionInsecure;
@@ -211,7 +211,7 @@ public class ZebraBluetoothPrinter extends CordovaPlugin implements DiscoveryHan
                 Log.e(LOG_TAG, e.getMessage());
                 e.printStackTrace();
             }
-        }  else if (action.equals("convertimage")) {
+        }  else if (action.equals("convertImage")) {
             try {				
                 String ruta = args.getString(0);
 				int y = Integer.parseInt(args.getString(1));

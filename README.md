@@ -1,7 +1,15 @@
+#  `@sbenitez73/cordova-ble-zbtprinter`
+
+[![npm version](https://img.shields.io/npm/v/@react-native-picker/picker.svg)](https://www.npmjs.com/package/@react-native-picker/picker)
+[![Build](https://github.com/react-native-picker/picker/workflows/Build/badge.svg)](https://github.com/react-native-picker/picker/actions) ![Supports Android, iOS, MacOS, and Windows](https://img.shields.io/badge/platforms-android%20|%20ios|%20macos|%20windows-lightgrey.svg) ![MIT License](https://img.shields.io/npm/l/@react-native-picker/picker.svg) [![Lean Core Extracted](https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg)](https://github.com/facebook/react-native/issues/23313)
+
 # cordova-plugin-ble-zbtprinter
 This plugin defines a global 'cordova.plugins.zbtprinter' object, which provides an API for printing base64 images and labels on a Zebra printer, converting base64 string to equivalent ZPL code, getting printer status and discovering Zebra printers with Bluetooth.
 
 Forked from [prakashsatyani](https://github.com/prakashsatyani/cordova-plugin-ble-zbtprinter.git)
+
+## Installation
+
 
 ## Usage
 Images can be printed on a Zebra printer in base64 format:
@@ -86,9 +94,6 @@ cordova.plugins.zbtprinter.getZPLfromImage(base64Image, addHeaderFooter, blackne
     }
 );
 ```
-
-## Installation
-cordova plugin add https://github.com/prakashsatyani/cordova-plugin-ble-zbtprinter
 
 ## ZPL - Zebra Programming Language
 For more information about ZPL please see the  [PDF Official Manual](https://support.zebra.com/cpws/docs/zpl/zpl_manual.pdf)

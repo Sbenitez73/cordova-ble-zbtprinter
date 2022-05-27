@@ -1,29 +1,61 @@
-var exec = require('cordova/exec');
+var API = require('./API');
 
-exports.discoverPrinters = function(successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'discoverPrinters', []);
-};
 
-exports.print = function(MACAddress, str, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'print', [MACAddress, str]);
-};
+module.exports = {
 
-exports.printImage = function(base64, MACAddress, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'printImage', [base64, MACAddress]);
-};
+    discoverPrinters: function (success, failure) {
+        if (success == null && failure == null) {
+            return API.discoverPrinters();
+        } else {
+            API.discoverPrinters().then(success).catch(failure);
+        }
+    },
+    
+    print: function (MACAddress, str, success, failure) {
+        if (success == null && failure == null) {
+            return API.print(MACAddress, str);
+        } else {
+            API.print(MACAddress, str).then(success).catch(failure);
+        }
+    },
 
-exports.getPrinterName = function(MACAddress, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'getPrinterName', [MACAddress]);
-};
+    printImage: function (base64, MACAddress,success, failure) {
+        if (success == null && failure == null) {
+            return API.printImage(base64, MACAddress);
+        } else {
+            API.printImage(base64, MACAddress).then(success).catch(failure);
+        }
+    },
 
-exports.getStatus = function(MACAddress, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'getStatus', [MACAddress]);
-};
+    getPrinterName: function (MACAddress, success, failure) {
+        if (success == null && failure == null) {
+            return API.getPrinterName(MACAddress);
+        } else {
+            API.getPrinterName(MACAddress).then(success).catch(failure);
+        }
+    },
 
-exports.getZPLfromImage = function(base64String, addHeaderFooter, blacknessPercentage, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'getZPLfromImage', [base64String, addHeaderFooter, blacknessPercentage]);
-};
+    getStatus: function (MACAddress, success, failure) {
+        if (success == null && failure == null) {
+            return API.getStatus(MACAddress);
+        } else {
+            API.getStatus(MACAddress).then(success).catch(failure);
+        }
+    },
 
-exports.convertImage = function (str, y, successCallback, errorCallback) {
-    cordova.exec(successCallback, errorCallback, 'ZebraBluetoothPrinter', 'convertimage', [str, y]);
-};
+    getZPLfromImage: function (base64String, addHeaderFooter, blacknessPercentage, success, failure) {
+        if (success == null && failure == null) {
+            return API.getZPLfromImage(base64String, addHeaderFooter, blacknessPercentage);
+        } else {
+            API.getZPLfromImage(base64String, addHeaderFooter, blacknessPercentage).then(success).catch(failure);
+        }
+    },
+
+    convertImage: function (str, y, success, failure) {
+        if (success == null && failure == null) {
+            return API.convertImage(str, y);
+        } else {
+            API.convertImage(str, y).then(success).catch(failure);
+        }
+    },
+}

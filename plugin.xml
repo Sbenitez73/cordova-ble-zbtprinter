@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="@sake12/cordova-plugin-ble-zbtprinter"
+        id="@sbenitez73/cordova-plugin-ble-zbtprinter"
         version="1.0.1">
 
-    <name>ZebraBluetoothPrinter</name>
-    <description>A Cordova/Phonegap driver for Zebra bluetooth printers</description>
+    <name>Zbt Printer</name>
+    <license>MIT</license>
+    <author>Santiago Benitez</author>
+
+    <description>This plugin allow print with zebra printers</description>
     <license>Apache 2.0</license>
     <keywords>cordova,bixolonprint,zebra,ionic,capacitor</keywords>
+    <repo>https://github.com/Sbenitez73/cordova-ble-zbtprinter</repo>
+    <issue>https://github.com/Sbenitez73/cordova-ble-zbtprinter/issues</issue>
 
-    <author>SimplyMobile</author>
 
     <engines>
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
 
-    <js-module src="www/zbtprinter.js" name="ZebraBluetoothPrinter">
-        <clobbers target="cordova.plugins.zbtprinter"/>
+    <js-module src="www/ZbtPrinter.js" name="ZbtPrinter">
+        <clobbers target="window.ZbtPrinter"/>
     </js-module>
+    <js-module src="www/API.js" name="API" />
 
     <!-- android -->
     <platform name="android">
@@ -28,14 +33,14 @@
             <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
         </config-file>
 
-        <source-file src="src/android/it/zenitlab/cordova/plugins/zbtprinter/ZebraBluetoothPrinter.java"
-                     target-dir="src/android/it/zenitlab/cordova/plugins/zbtprinter"/>
-        <source-file src="src/android/it/zenitlab/cordova/plugins/zbtprinter/ZPLConverter.java"
-                     target-dir="src/android/it/zenitlab/cordova/plugins/zbtprinter"/>
+        <source-file src="src/android/sbenitez/cordova/zbtprinter/ZebraBluetoothPrinter.java"
+                     target-dir="src/android/sbenitez/cordova/zbtprinter"/>
+        <source-file src="src/android/sbenitez/cordova/zbtprinter/ZPLConverter.java"
+                     target-dir="src/android/sbenitez/cordova/zbtprinter"/>
 
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="ZebraBluetoothPrinter">
-                <param name="android-package" value="it.zenitlab.cordova.plugins.zbtprinter.ZebraBluetoothPrinter"/>
+            <feature name="ZbtPrinter">
+                <param name="android-package" value="sbenitez.cordova.zbtprinter.ZebraBluetoothPrinter"/>
             </feature>
         </config-file>
 
