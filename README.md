@@ -1,7 +1,6 @@
 #  `@sbenitez73/cordova-ble-zbtprinter`
 
-[![npm version](https://img.shields.io/npm/v/@sbenitez73/cordova-ble-zbtprinter/picker.svg)](https://www.npmjs.com/package/@sbenitez73/cordova-ble-zbtprinter)
-[![Build](https://github.com/react-native-picker/picker/workflows/Build/badge.svg)](https://github.com/react-native-picker/picker/actions) ![Supports Android, iOS, MacOS, and Windows](https://img.shields.io/badge/platforms-android%20|%20ios|%20macos|%20windows-lightgrey.svg) ![MIT License](https://img.shields.io/npm/l/@react-native-picker/picker.svg) [![Lean Core Extracted](https://img.shields.io/badge/Lean%20Core-Extracted-brightgreen.svg)](https://github.com/facebook/react-native/issues/23313)
+[![npm version](https://img.shields.io/npm/v/@sbenitez73/cordova-ble-zbtprinter?label=VERSION&style=plastic)](https://www.npmjs.com/package/@sbenitez73/cordova-ble-zbtprinter)
 
 # @sbenitez73/cordova-ble-zbtprinter
 This plugin is built so that it can be used with Zebra thermal printers, through bluetooth, we can print images and whatever we want with Zebra's ZPL or CPCL programming language.
